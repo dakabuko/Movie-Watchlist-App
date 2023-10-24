@@ -1,0 +1,161 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--ff--primary);
+}
+
+:root {
+    --ff--primary:'Nunito', sans-serif;
+    --ff--secondary:
+
+    --fw--light: 300;
+    --fw--reg: 400;
+    --fw--bold: 700;
+
+    --fs--h1: 2rem;
+    --fs--h2: 1.5rem;
+    --fs--h3: 1.25rem;
+    --fs--p: 1rem;
+
+    --clr--primary: #21C6AF;
+    --clr--secondary: #2A2322;
+    --clr--accent: #D7E7E5;
+}
+
+/* header */ 
+
+.container {
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('img/cinema.jpg');
+    background-size: cover;
+    height: 15em;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr--accent);
+}
+
+.page-nav {
+    text-decoration: none;
+    color: var(--clr--primary);
+    margin-left: 2rem;
+}
+
+/* Search Bar */
+
+.search-bar {
+    text-align: center;  
+}
+
+.search-input,
+.search-btn {
+    height: 2.5em;
+    padding: 0 2em;
+    border: none;
+    border: .5px solid var(--clr--primary);
+    position: relative;
+    top: -15px;
+}
+
+.search-input {
+    border-radius: 10px 0 0 10px;
+}
+
+.search-btn {
+    border-radius: 0 10px 10px 0;
+    margin-left: -10px;
+}
+
+/* Container */
+
+.movies-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.movie {
+    display: grid;
+    grid-template-areas: 
+        'img body'
+        'img details'
+        'img plot'
+    ; 
+    background: var(--clr--accent); 
+    border-radius: 5px; 
+    padding: 1em;
+}
+
+.movie-poster {
+    grid-area: img;
+}
+
+.movie-poster img {
+    width: 200px;
+    margin-right: .5rem;
+    border-radius: 8px;
+}
+
+.movie-data {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    grid-area: body;
+    padding: 1em 0 0;
+}
+
+.movie-details {
+    grid-area: details;
+    padding: .5em 0;
+}
+
+.movie-description {
+    grid-area: plot;
+    padding: .5em 0;
+    font-size: var(--fs--p);
+    text-overflow: word;
+}
+
+/* btn */
+
+.add-remove-btn {
+    padding: .5em 1em;
+    margin-top: 1em;
+    background: var(--clr--primary);
+    color: var(--clr--accent);
+    font-weight: var(--fw--bold);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px var(--clr--secondary);
+}
+
+.add-remove-btn:hover {
+    box-shadow: 0 2px var(--clr--secondary);
+    top: 2px;
+    transform: scale(1.05);
+
+}
+
+.add-remove-btn:active {
+    box-shadow: none;
+    top: 6px;
+}
+
+/* watchlist */
+
+.watchlist__container {
+    background-image: url('./img/watchlist.jpg');
+
+} 
+
+.empty__watchlist {
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.empty__watchlist a {
+    text-decoration: none;
+    color: var(--clr--primary);
+}
